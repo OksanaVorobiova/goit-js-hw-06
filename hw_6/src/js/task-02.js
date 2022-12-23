@@ -7,13 +7,22 @@ const ingredients = [
   'Condiments',
 ];
   
-for (const ingredient of ingredients) {
-  
+const ingredientsEl = document.querySelector('#ingredients');
 
-let itemEl = document.createElement('li');
-itemEl.classList.add('item');
-  itemEl.textContent = `${ingredient}`;
-  console.log(itemEl.outerHTML);
+const makeMarkup = (ingredients) => {
+  return ingredients.map(ingredient => {
+
+    const itemEl = document.createElement('li');
+    itemEl.classList.add('item');
+    itemEl.textContent = `${ingredient}`;
+
+    return itemEl;
+  });
 }
+
+const items = makeMarkup(ingredients);
+ingredientsEl.append(...items);
+
+//console.log(makeMarkup(ingredients));
 
   
