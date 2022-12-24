@@ -8,3 +8,4 @@ textInput.addEventListener('input', (event) => {
         return nameEl.textContent = event.currentTarget.value;
     }
 });
+
