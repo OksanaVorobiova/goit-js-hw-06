@@ -11,8 +11,16 @@ function onSubmit(event) {
     
 if (email.value === "" || password.value === "" ) {
     return alert('fill in all fields');
-} else {
-    console.log(`login: ${email.value}; password: ${password.value}`);
+} 
+    //console.log(`login: ${email.value}; password: ${password.value}`);
+    const dataObj = new Object();
+    dataObj.email = email.value;
+    dataObj.password = password.value;
+    
+    console.log(dataObj);
+    
     event.currentTarget.reset();
-    }
+    
 }
+
+
